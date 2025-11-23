@@ -1,5 +1,4 @@
 from wtforms.validators import email
-
 from auto_app.config import SECRET_KEY, ACCESS_TOKEN_EXPIRE_MINUTES, REFRESH_TOKEN_EXPIRE_DAYS, ALGORITHM
 from jose import jwt
 from passlib.context import CryptContext
