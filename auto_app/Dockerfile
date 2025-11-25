@@ -4,10 +4,10 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /auto_app
 
-COPY requirements.txt /app/
+COPY req.txt /auto_app/
 RUN pip install --upgrade pip && \
-    pip install -req.txt
+    pip install -r req.txt
 
 COPY nginx/nginx.conf /etc/nginx/conf.d/
 
-COPY . /app/
+COPY . /auto_app/

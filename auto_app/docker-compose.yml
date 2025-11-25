@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-
   web:
     build: .
     command: >
@@ -14,7 +13,7 @@ services:
       - db_sql
 
   db_sql:
-    image: postgres:latest
+    image: postgres:17
     restart: always
     environment:
       POSTGRES_DB: postgres
@@ -22,8 +21,6 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
-
 
 volumes:
   postgres_data:
